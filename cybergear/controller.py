@@ -478,7 +478,7 @@ class YourCeePort:
     def close(self):
         self.serial.close()
 
-def test_motion_mode():
+def test_control_mode():
     """
     默认模式
     """
@@ -550,14 +550,9 @@ def test_set_id():
     assert check_id == new_id, f"ID not match: {check_id}"
 
 if __name__ == '__main__':
-    # b = bytes.fromhex('41549007efec0805700000020000000d0a')
-    # # data = get_req(b, YourCeeBridge.unpack_AT)
-    # data = YourCeeBridge.unpack_AT(b)
-    # # print(data)
-    # print(data.mode, data.data2, data.id, data.data1.hex())
     logging.basicConfig(level=logging.INFO)
-    # test_motion_mode()
+    # test_control_mode()
     # test_cur_mode()
-    # test_vel_mode()
+    test_vel_mode()
     # test_pos_mode()
     # test_set_id()
