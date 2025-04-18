@@ -30,7 +30,7 @@ USB-CAN模块采用的是 [YourCee](https://wit-motion.yuque.com/wumwnr/docs/nrn
 
 Mi_Data 说明书上有，基本格式为(29 bits + 8 bytes)的格式
 
-| **数据域** | **29 位 ID** | **29 位 ID** | **29 位 ID** | **8Byte 数据区** |
+| **数据域** |              | **29 位 ID** |              | **8Byte 数据区** |
 |------------|--------------|--------------|--------------|------------------|
 | **大小**   | bit28~bit24  | bit23~8      | bit7~0       | Byte0~Byte7      |
 | **描述**   | 通信类型     | 数据区 2     | 目标地址     | 数据区 1         |
@@ -48,5 +48,5 @@ $$
 AT 模式的 USB 格式:
 
 $$
-AT + \text{USB-id} + \underbrace{08}_{\text{1 byte}} + \text{8 bytes} + \textbackslash r\textbackslash n
+AT + \text{USB-id} + \underbrace{08}_{\text{1 byte}} + \text{8 bytes} + \backslash r \backslash n
 $$
