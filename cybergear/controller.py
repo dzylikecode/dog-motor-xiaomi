@@ -395,6 +395,7 @@ class YourCeePort:
         self._mode = value
         match self.mode:
             case 'AT':
+                self.serial.write(b'AT+AT\r\n')
                 self.encode = YourCeeBridge.pack_AT
                 def deocde(x: bytes): return get_req(x, YourCeeBridge.unpack_AT)
                 self.decode  = deocde
