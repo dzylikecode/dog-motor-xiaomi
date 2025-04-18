@@ -40,11 +40,13 @@ Mi_Data 说明书上有，基本格式为(29 bits + 8 bytes)的格式
 根据[YourCee](https://wit-motion.yuque.com/wumwnr/docs/nrngkq)的`CAN_ID(报文标识符)说明`，ID的关系是这样的
 
 $$
-\text{USB\_id}(\underbrace{\text{id}}_{\text{高 29 bits}} + \underbrace{100}_{\text{低 3 bits}}) \rightarrow \text{Mi}(\text{id})
+\text{USB-id}(\underbrace{\text{id}}_{\text{高 29 bits}} + 100) \rightarrow \text{Mi-id}
 $$
+
+
 
 AT 模式的 USB 格式:
 
 $$
-\text{'AT'} + \text{USB\_id} + \underbrace{08}_{\text{1 byte}} + \text{8 bytes} + \text{'\textbackslash r\textbackslash n'}
+AT + \text{USB-id} + \underbrace{08}_{\text{1 byte}} + \text{8 bytes} + \textbackslash r\textbackslash n
 $$
