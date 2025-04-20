@@ -66,3 +66,11 @@ time.sleep(3)
 port.disable(id)
 port.close()
 ```
+
+## dependencies
+
+单一文件`cybergear/controller`，仅仅依赖`pyserial`这个包
+
+```bash
+pip install pyserial
+```
