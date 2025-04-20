@@ -50,3 +50,19 @@ AT 模式的 USB 格式:
 $$
 AT + \text{USB-id} + \underbrace{08}_{\text{1 byte}} + \text{8 bytes} + \backslash r \backslash n
 $$
+
+## example
+
+```python
+from controller import YourCeePort, RunMode, Args
+import time
+port = YourCeePort('COM10', 'AT', 0xFD)
+id = port.search_id()
+port.set_run_mode(id, RunMode.position)
+port.enable(id)
+port.write_single_arg(id, Args.limit_spd, 5.0)
+port.write_single_arg(id, Args.loc_ref, -12.0)
+time.sleep(3)
+port.disable(id)
+port.close()
+```
