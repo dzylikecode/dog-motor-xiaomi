@@ -1,5 +1,11 @@
 # 小米电机
 
+灵足时代：
+
+- [文档](https://robstride.com/assets/product_manual_robStride03-9c54db7a.pdf)
+
+cybergear：
+
 - [文档](http://roboticscv.com/wp-content/uploads/pdf/CyberGear微电机使用说明书.pdf)
 - [资料](https://github.com/belovictor/cybergear-docs)
 
