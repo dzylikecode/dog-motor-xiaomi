@@ -439,6 +439,8 @@ class YourCeePort:
             id = self.wait_for_id()
             if id is not None:
                 return id
+        else:
+            raise ValueError("No ID found")
     
     def enable(self, target: int):
         self.write(Req3(target, self.host))
